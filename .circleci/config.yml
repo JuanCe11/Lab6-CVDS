@@ -39,4 +39,25 @@ jobs:
 
       # run tests!
       - run: mvn integration-test
+    deploy:
+    docker:
+      - image: buildpack-deps:trusty
+    steps:
+      - checkout
+      - run:
+          name: Deploy Master to Heroku
+          command: 
+            git push https://heroku:35d25ad4-b49a-4f40-9e98-b658bc54b1a1git.heroku.com/gamecvds.git master
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
 
