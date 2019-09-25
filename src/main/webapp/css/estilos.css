@@ -1,0 +1,54 @@
+*{
+	padding:0;
+	margin: 0;
+	font-family: "Century Gothic"; 
+}
+
+.main p{
+	text-align: justify;
+}
+
+body{
+	background:#e6e6e6;
+	text-align: center;
+}
+
+header {
+	background:#528FD5;
+}
+
+header, .main, footer{
+	width: 90%;
+	max-width: 1000px;
+	margin:20px auto;
+}
+
+.main .intento{
+	width: 68.5%;
+	float:left;
+	margin-right: 1.5%;
+	background: #fff;
+}
+
+.main .intento h3{
+	padding: 20px;
+	margin-bottom:20px;
+
+}
+
+aside{
+	width: 30%;
+	background: #ff8000;
+	float:left;
+	padding:20px;
+	box-sizing: border-box;
+}
+
+footer{ 
+	background: #000;
+	max-width :1000px;
+	color: #fff;
+	clear:both;
+	padding:1%;
+	text-align: center;
+}
